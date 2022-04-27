@@ -33,7 +33,8 @@ class MoneyTest {
     private static Stream<Arguments> notEqualityTest() {
         return Stream.of(
             Arguments.of(new Dollar(5), new Dollar(6)),
-            Arguments.of(new Franc(5), new Franc(6))
+            Arguments.of(new Franc(5), new Franc(6)),
+            Arguments.of(new Franc(5), new Dollar(5))
         );
     }
 }
