@@ -4,6 +4,11 @@ public abstract class Money {
     protected int amount;
     protected String currency;
 
+    public Money(final int amount, final String currency) {
+        this.amount = amount;
+        this.currency = currency;
+    }
+
     public static Money franc(final int amount) {
         return new Franc(amount, "CHF");
     }

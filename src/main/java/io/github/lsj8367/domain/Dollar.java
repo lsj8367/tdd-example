@@ -3,8 +3,7 @@ package io.github.lsj8367.domain;
 public class Dollar extends Money {
 
     public Dollar(final int amount, final String currency) {
-        this.amount = amount;
-        this.currency = currency;
+        super(amount, currency);
     }
 
     @Override
