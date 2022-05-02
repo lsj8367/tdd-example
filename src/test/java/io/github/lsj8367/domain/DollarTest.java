@@ -12,7 +12,7 @@ class DollarTest {
 
     @BeforeEach
     void setUp() {
-        five = new Dollar(5);
+        five = new Dollar(5, "USD");
     }
 
     @Test
@@ -25,10 +25,10 @@ class DollarTest {
     @Test
     @DisplayName("곱해주면 새로운 값을 가지는 불변객체를 만든다.")
     void multipleContinue() {
-        Dollar product = Money.dollar(5);
+        Dollar product = new Dollar(5, "USD");
         assertThat(product.times(2)).isEqualTo(Money.dollar(10));
 
-        product = Money.dollar(5);
+        product = new Dollar(5, "USD");
         assertThat(product.times(3)).isEqualTo(Money.dollar(15));
     }
 
